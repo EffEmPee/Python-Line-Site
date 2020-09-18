@@ -1,5 +1,3 @@
 ### Link para o site:
 
-[https://python-line.netlify.app/][site]
-
-[site]: https://python-line.netlify.app/
+<a href="https://python-line.netlify.app/" target="_blank" styles="font-size: 30px">Python Line Site<a/>
