@@ -1,0 +1,103 @@
+.sideBar {
+  width: 345px;
+  height: 100vh;
+  float: left;
+
+  background: #202020; 
+  font-family: 'Source Code Pro', monospace;
+
+  box-shadow: 12px 0 15px rgba(19, 19, 19, 0.301);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-flow: column;
+}
+
+.container {
+  width: 100%;
+  border-bottom-left-radius: 9%;
+  border-bottom-right-radius: 9%;
+
+  background-color: #993333;
+  display: block;
+}
+
+.container .name {
+  color: #202020;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+
+  font-family: 'Microsoft Yi Baiti';
+}
+
+#logo {
+  width: 150px;
+  height: 150px;
+
+  border-radius: 10%;
+
+  display: flex;
+  margin: 40px auto;
+  background: none;
+}
+
+.buttons {
+  width: 100%;
+
+  height: 70%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-flow: column;
+}
+
+.button {
+  height: 100px;
+  width: 80%;
+
+  font-size: 22px;
+  font-weight: 400;
+  color: #dddddd;
+  
+
+  margin: 20px auto 0;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  background: #3b3d3a;
+  border-left: 5px solid #993333;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  transition: 0.3s;
+}
+
+.button:hover {
+  border-radius: 7px;
+  border: solid 5px #993333;
+
+  cursor: grab;
+}
+
+.buttons img {
+  width: 60px;
+  height: 60px;
+
+  margin: auto ;
+}
+
+.text {
+  width: 175px;
+  white-space: nowrap;
+  text-align: center;
+
+  margin: auto;
+  transition: 0.3s;
+}
