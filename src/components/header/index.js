@@ -17,7 +17,7 @@ export default class Header extends Component {
       <nav className="sideBar">
         <ul className="sideBar-nav">      
           <li className="logo">
-            <a href="#" className="logo-link">
+            <a href="/" className="logo-link">
               <img alt="logo" src={ logo } />
               <span className="link-text logo-text">Python line</span>
 
