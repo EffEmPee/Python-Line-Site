@@ -105,7 +105,7 @@
 }
 
 /*Large screens*/
-@media only screen and (min-width: 600px) and (min-height: 849px){
+@media only screen and (min-width: 600px) and (min-height: 600px){
   .sideBar {
     top: 0;
     width: 8rem;
