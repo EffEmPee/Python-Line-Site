@@ -1,103 +1,188 @@
 .sideBar {
-  width: 345px;
-  height: 100vh;
-  float: left;
-
+  position: fixed;
   background: #202020; 
   font-family: 'Source Code Pro', monospace;
-
   box-shadow: 12px 0 15px rgba(19, 19, 19, 0.301);
+  transition: 200ms ease;
+}
 
+.sideBar-nav {
+  list-style: none;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-flow: column;
-}
-
-.container {
-  width: 100%;
-  border-bottom-left-radius: 9%;
-  border-bottom-right-radius: 9%;
-
-  background-color: #993333;
-  display: block;
-}
-
-.container .name {
-  color: #202020;
-  font-size: 40px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 20px;
-
-  font-family: 'Microsoft Yi Baiti';
-}
-
-#logo {
-  width: 150px;
-  height: 150px;
-
-  border-radius: 10%;
-
-  display: flex;
-  margin: 40px auto;
+ 
+  font-size: 22px;
+  color: #dddddd;
   background: none;
-}
+  transition: 0.3s;
 
-.buttons {
-  width: 100%;
-
-  height: 70%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-flow: column;
+  height: 100%;
 }
 
 .button {
-  height: 100px;
-  width: 80%;
+  width: 100%;
+}
 
-  font-size: 22px;
-  font-weight: 400;
-  color: #dddddd;
-  
-
-  margin: 20px auto 0;
-  border-top-right-radius: 7px;
-  border-bottom-right-radius: 7px;
-  background: #3b3d3a;
-  border-left: 5px solid #993333;
-
+.button-link {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-
-  transition: 0.3s;
+  height: 8rem;
+  color: #dddddd;
+  text-decoration: none;
+  transition: 200ms;
 }
 
 .button:hover {
-  border-radius: 7px;
-  border: solid 5px #993333;
-
-  cursor: grab;
+  background: #3b3d3a;
 }
 
-.buttons img {
-  width: 60px;
-  height: 60px;
-
-  margin: auto ;
-}
-
-.text {
-  width: 175px;
+.link-text {
+  margin: 0 0.5rem;
   white-space: nowrap;
-  text-align: center;
+  opacity: 0;
+  display: none;
+}
 
+.button-link img {
+  min-width: 4.2rem;
+  margin: 0 2rem;
+}
+
+.logo {
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.3ch;
+  width: 100%;
+  color: #dddddd;
+  font-family: 'Microsoft Yi Baiti', monospace;
+  border-bottom: solid 4px #993333;
+
+  transition: 200ms;
+}
+
+.logo img {
   margin: auto;
-  transition: 0.3s;
+  width: 5.5rem;
+  /* background: #993333; */
+  border-radius: 15%;
+  transition: 200ms;
+}
+
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  width: 100%;
+  height: 8rem;
+  color: #dddddd;
+  text-decoration: none;
+  transition: 200ms;
+}
+
+.logo i {
+  transform: rotate(0deg) scale(1.6);
+  transition: 200ms;
+  margin: 1rem auto;
+}
+
+.sideBar:hover .logo i {
+  transform: rotate(-180deg) scale(1.6);
+  margin: 1rem 0 1rem auto;
+}
+
+.logo-text {
+  display: inline;
+  position: absolute;
+  opacity: 0;
+  transition: 200ms;
+  font-size: 2.5rem;
+  left: 6rem;
+}
+
+/*Large screens*/
+@media only screen and (min-width: 600px){
+  
+  main {
+    margin-left: 8rem;
+    padding: 1rem;
+  }
+
+  .sideBar {
+    top: 0;
+    width: 8rem;
+    height: 100vh;
+  }
+  
+  .button:last-child {
+    margin-top: auto;
+  }
+
+  
+  .sideBar:hover {
+    width: 25rem;
+  }
+
+  .sideBar:hover .link-text {
+    opacity: 1;
+    display: block;
+  }
+  
+  .sideBar:hover .logo img {
+    margin-left: 1rem;
+    width: 4.6rem;
+  }
+  
+  .sideBar:hover .logo-text {
+    opacity: 1;
+  }
+
+}
+
+/*Small screen*/
+@media only screen and (max-width: 599px) {
+  .sideBar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .sideBar-nav {
+    flex-direction: row;
+  }
+
+  .button {
+    height: 100%;
+    width: 20%;
+    margin:0;
+  }
+
+  .button-link {
+    height: 100%;
+    justify-content: center;
+    transform: scale(0.8);
+  }
+
+
+  main {
+    margin: 0;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .sideBar {
+    height: 4.5rem;
+  }
+
+  .button-link {
+    transform: scale(0.5);
+  }
 }
