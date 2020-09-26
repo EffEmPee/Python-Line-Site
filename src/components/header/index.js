@@ -26,31 +26,31 @@ export default class Header extends Component {
           </li>
           <li className="button">
             <a href="/" className="button-link">
-              <img href="/" alt="Aboutus" src={ about } />  
+              <img alt="Aboutus" src={ about } />  
               <span className="link-text">Quem somos</span>
             </a>
           </li>
           <li className="button">
             <a href="/" className="button-link">
-              <img href="/" alt="group" src={ group } />  
+              <img alt="group" src={ group } />  
               <span className="link-text" >Participantes</span>
             </a>
           </li>
           <li className="button">
             <a href="/" className="button-link">
-              <img href="/" alt="projects" src={ projects } />  
+              <img alt="projects" src={ projects } />  
               <span className="link-text">Projetos</span>
             </a> 
           </li>
           <li className="button">
             <a href="/" className="button-link">
-              <img href="/" alt="help" src={ help } />  
+              <img alt="help" src={ help } />  
               <span className="link-text">Como Ajudar</span>
             </a>
           </li>
           <li className="button">
             <a href="/" className="button-link">
-              <img href="/" alt="contact" src={ contact } />  
+              <img alt="contact" src={ contact } />  
               <span className="link-text">Contato</span>
             </a>
           </li>
