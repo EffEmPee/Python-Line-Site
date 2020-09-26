@@ -19,6 +19,7 @@ a:hover {
 .member img {
     width: 180px;
     border-radius: 50%;
+    border: solid 4px #993333;
 
     margin: 2rem auto;
 }
@@ -42,6 +43,7 @@ a:hover {
 
 }
 
+/*responsive*/
 @media only screen and (min-width: 1750px){
   .container{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -67,3 +69,4 @@ a:hover {
       grid-template-columns: 1fr;
     }
 }
+
