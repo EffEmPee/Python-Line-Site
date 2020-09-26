@@ -1,11 +1,41 @@
-import React, { Component } from "react";
+import React, { Component} from 'react';
+import api from '../../services/api';
 
-export default class About extends Component {
+import './style.css';
+
+export default class Product extends Component {
+  constructor(){
+    super();
+    this.state = {
+      githubData: [],
+    };
+  }
+
+  componentDidMount() {
+    api.get(`organizations/67077136/public_members`)
+    .then((res) => {
+      this.setState({githubData: res.data});
+      console.log(this.state.githubData[0].login)
+    })
+  }
+
   render() {
-    return (
+    const {githubData} = this.state;
+
+    return(
       <main>
-        <h1> Participantes</h1>
+        <div className="container">
+          {githubData.map(product => (
+            <div className="member" key={product.id}>
+              <a href={product.html_url} target="blank">
+                <img src ={product.avatar_url} alt="imagem de perfil"/>
+                <strong className="name">{product.login}</strong>
+              </a>
+            </div>
+          ))}
+        </div>
       </main>
     )
   }
 };
+
