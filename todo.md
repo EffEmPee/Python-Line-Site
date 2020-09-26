@@ -1,6 +1,6 @@
 ** Atividades restantes :
 
-  -routes
+  -routes ✔
   -api GET
   -product schema
   -Pages desing
