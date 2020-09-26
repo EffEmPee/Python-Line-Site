@@ -15,7 +15,6 @@ export default class Product extends Component {
     api.get(`organizations/67077136/public_members`)
     .then((res) => {
       this.setState({githubData: res.data});
-      console.log(this.state.githubData[0].login)
     })
   }
 
@@ -27,7 +26,7 @@ export default class Product extends Component {
         <div className="container">
           {githubData.map(product => (
             <div className="member" key={product.id}>
-              <a href={product.html_url} target="blank">
+              <a className="member-link" href={product.html_url} target="blank">
                 <img src ={product.avatar_url} alt="imagem de perfil"/>
                 <strong className="name">{product.login}</strong>
               </a>

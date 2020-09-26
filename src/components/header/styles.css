@@ -48,7 +48,7 @@
 }
 
 .button-link img {
-  min-width: 4.2rem;
+  max-width: 4.2rem;
   margin: 0 2rem;
 }
 
@@ -151,6 +151,7 @@
     bottom: 0;
     width: 100vw;
     height: 5rem;
+    overflow: hidden;
   }
 
   .logo {
@@ -172,10 +173,15 @@
     justify-content: center;
     transform: scale(0.8);
   }
+  
+  .sideBar:hover .button-link img{
+    max-width: 5rem;
+  }
 
 
   main {
     margin: 0;
+    margin-bottom: 5rem;
     padding: 1rem;
   }
 }
@@ -183,9 +189,11 @@
 @media only screen and (max-width: 400px) {
   .sideBar {
     height: 4.5rem;
+    position: fixed;
   }
 
   .button-link {
     transform: scale(0.5);
   }
+  
 }
