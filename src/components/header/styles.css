@@ -4,6 +4,9 @@
   font-family: 'Source Code Pro', monospace;
   box-shadow: 12px 0 15px rgba(19, 19, 19, 0.301);
   transition: 200ms ease;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .sideBar-nav {
