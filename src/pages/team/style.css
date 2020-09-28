@@ -1,5 +1,6 @@
 .container {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -8,7 +9,6 @@
   min-width: 18rem;
   height: 300px;
   margin: 1rem auto;
-
 }
 
 .member img {
