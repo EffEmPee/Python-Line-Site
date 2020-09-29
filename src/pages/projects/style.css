@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-content: center;
+}
+
+.packages {
+  width: 18rem;
+  height: 300px;
+  background: #202020;
+  border-radius: 2.3rem;
+  text-decoration: none;
+  color: #ddd;
+  font-family: 'Microsft Yi Baiti', monospace;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.6fr 1fr 0.4fr;
+  transition: 0.2s;
+  margin: 1rem auto;
+}
+
+.packages:hover {
+  transform: scale(1.1, 1.1);
+  background-color: #3b3d3a;
+  border: 4px solid #993333;
+}
+
+.title {
+  font-size: 35px;
+  margin: auto;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.description {
+  font-size: 20px;
+  margin: auto;
+}
+
+.counters {
+  width: 100%;
+  font-size: 20px;
+  display: flex;
+}
+
+.stars, .watchers {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.2s;
+}
+
+.packages:hover .fa-star, .packages:hover .fa-eye {
+  font-weight: 900;
+} 
+
+.counters p{
+  margin-left: .5rem;
+}
+

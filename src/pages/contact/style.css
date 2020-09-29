@@ -1,0 +1,170 @@
+main {
+  padding: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  height: 100vh;
+}
+  
+.App{
+  display: block;
+  justify-content: right;
+  padding: 1rem;
+  border-left: 1px solid #202020;
+
+}
+
+.App form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.user-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 4rem 0;
+}
+
+.user-info:first-child .form-group input{
+  margin: 1.1rem;
+}
+
+.form-group input{
+  width: 90%;
+  display: block;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  background: none;
+  border-bottom: 2px solid #993333;
+  color: #ddd;
+  font-size: 25px;
+} 
+
+.form-group input:-webkit-autofill{
+  background: none;
+  box-shadow: 0 0 0px 1000px #3b3d3a inset;
+  -webkit-text-fill-color: #ddd !important;
+}
+
+.message label {
+  display: flex;
+}
+
+.form-group textarea {
+  width: 80%;
+  height: 20rem;
+  margin: 1rem auto;
+  background: none;
+  border: none;
+  border-left: 2px solid #993333;
+  resize: none;
+  color: #ddd;
+  font-size: 25px;
+  padding-left: .3rem;
+}
+
+.form-footer {
+  width: 100%;
+  display: flex;
+}
+
+.App .btn {
+  width: 211px;
+  padding: .7rem 1rem;
+  margin:1rem auto;
+
+  background: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 20px;
+  color: #993333;
+  transition: 0.2s ease;
+  border: 2px solid #993333;
+}
+
+.App button:hover {
+  background-color: #993333;
+  color: #ddd;
+}
+
+.contact-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-link .container{
+  display: flex;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #202020;
+  padding: 20% 10%;
+  border-radius: 1.3rem;
+}
+
+.container #social {
+  width: 100%;
+  margin-top: auto;
+  text-align: center;
+  font-size: 50px;
+}
+
+
+.social {
+  margin: 3rem auto;
+  list-style: none;
+  font-size: 100px;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.social-link {
+  margin: 1rem;
+}
+
+.social-link a {
+  color: #ddd;
+}
+
+.fab:hover {
+  font-weight: 400;
+}
+
+@media only screen and (max-width:1125px){
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .contact-link {
+    margin: 2rem auto;
+
+    padding: 1rem 0;
+  }
+
+  .contact-link .container {
+    background: none;
+  }
+
+  .App {
+    border-left: none;
+    border-top: 1px solid #202020;
+    margin-bottom: 6rem;
+  }
+
+  .App .btn {
+    width: 80%;
+  }
+}
